@@ -1,14 +1,14 @@
-import './App.css'
+import './App.css';
+import { Starships } from './components/Body';
+import { Header } from './components/Header';
 
 function App() {
- 
-
-  return (
-    <div>
-    <h1>New Sprint 7</h1>
-    <h2>Start Wars</h2>
-    </div>
-  )
+	return (
+		<div className='App'>
+			<Header />
+			<Starships />
+		</div>
+	);
 }
 
-export default App
+export default App;
