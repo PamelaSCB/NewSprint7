@@ -1,11 +1,11 @@
 import { Container } from './DescriptionShipStyled';
+import { endPointsAPI } from '../../../constantes/endpoints';
 export const DescriptionShip = ({ ship, onBackClick }) => {
 	const replaceImage = error => {
-		error.target.src =
-			'https://starwars-visualguide.com/assets/img/placeholder.jpg';
+		error.target.src = endPointsAPI.starshipNoImg;
 	};
 	const id = ship.url.slice(32, -1);
-	const image = `https://starwars-visualguide.com/assets/img/starships/${id}.jpg`;
+	const image = `${endPointsAPI.starshipImg + id}.jpg`;
 
 	return (
 		<Container>

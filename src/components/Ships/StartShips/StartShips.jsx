@@ -1,20 +1,27 @@
 import { useState, useEffect } from 'react';
 import { DescriptionShip } from '../DescriptionShip/DescriptionShip';
+import { endPointsAPI } from '../../../constantes/endpoints';
+import { useFetchApi } from '../../../hooks/usefetchApi';
+import { ShowPages } from '../ShowPages/ShowPages.jsx';
 
 export const Starships = () => {
-	const [shipsData, setShipsData] = useState([]);
-	const [selectedShip, setSelectedShip] = useState(null);
+	const url = endPointsAPI.starships;
 
-	useEffect(() => {
-		fetch('https://swapi.dev/api/starships/')
-			.then(response => response.json())
-			.then(shipsData => setShipsData(shipsData.results));
-	}, []);
+	const [selectedShip, setSelectedShip] = useState(null);
+	const [page, setPage] = useState(1);
+	const { shipsData, shipDataError } = useFetchApi(url, page);
 
 	return (
-		<div className='start'>
-			<h1 className='startH1'>STARTSHIPS</h1>
+		<div>
 			<div className='containerShips'>
+				<h1>STARTSHIPS</h1>
+				<>
+					{selectedShip === null ? (
+						<div>
+							<ShowPages page={page} setPage={setPage} next={true} />
+						</div>
+					) : null}
+				</>
 				{selectedShip ? (
 					<DescriptionShip
 						ship={selectedShip}
