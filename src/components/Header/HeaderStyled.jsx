@@ -6,7 +6,7 @@ export const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 2rem 0;
-
+	
 	div:nth-of-type(1) {
 		width: 100%;
 		display: block;
@@ -32,13 +32,14 @@ export const Container = styled.div`
 		width: 8rem;
 		background-color: #111;
 		padding: 1rem;
-		font-size: 1.2rem;
+		font-size: 1.3rem;
 		border: none;
-		color: #898888;
+		color: #eef;
 		text-transform: uppercase;
 		cursor: pointer;
 		&:hover {
-			outline: 0.1rem solid #ccc;
+			outline: 0.1rem solid transparent;
+			border-radius: 0.5rem;
 		}
 	}
 	@media (max-width: 768px) {
@@ -49,4 +50,11 @@ export const Container = styled.div`
 			margin: 0;
 		}
 	}
+	@media (max-width: 480px) {
+    button {
+      font-size: 1rem;
+    }
+  }
 `;
+
+

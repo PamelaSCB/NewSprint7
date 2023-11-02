@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
-import { DescriptionShip } from '../DescriptionShip/DescriptionShip';
-import { endPointsAPI } from '../../../constantes/endpoints';
-import { useFetchApi } from '../../../hooks/usefetchApi';
+import { useState, useEffect} from 'react';
+import { DescriptionShip } from '../DescriptionShip/DescriptionShip.jsx';
+import {useFetchApi} from '../../../libr/hooks/usefetchApi.jsx';
+import { endPointsAPI } from '../../../libr/constantes/endpoints.jsx';
 import { ShowPages } from '../ShowPages/ShowPages.jsx';
+import { Container } from './StartShipsStyled.jsx';
 
 export const Starships = () => {
 	const url = endPointsAPI.starships;
@@ -12,16 +13,13 @@ export const Starships = () => {
 	const { shipsData, shipDataError } = useFetchApi(url, page);
 
 	return (
-		<div>
+		<Container>
 			<div className='containerShips'>
-				<h1>STARTSHIPS</h1>
-				<>
-					{selectedShip === null ? (
-						<div>
-							<ShowPages page={page} setPage={setPage} next={true} />
-						</div>
-					) : null}
-				</>
+				<div className='start'>
+					<p className='home'>home</p>
+					<p className='startShips'>startships</p>
+				</div>
+
 				{selectedShip ? (
 					<DescriptionShip
 						ship={selectedShip}
@@ -39,7 +37,14 @@ export const Starships = () => {
 						</div>
 					))
 				)}
+				<>
+					{selectedShip === null ? (
+						<div>
+							<ShowPages page={page} setPage={setPage} next={true} />
+						</div>
+					) : null}
+				</>
 			</div>
-		</div>
+		</Container>
 	);
 };

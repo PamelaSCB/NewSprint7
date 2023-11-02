@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetApi } from "../api/fechtApi";
+import { fetApi } from "../utils/fechtApi";
 
 
 export const useFetchApi = (url, page) => {

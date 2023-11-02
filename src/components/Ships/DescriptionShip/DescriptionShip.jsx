@@ -1,5 +1,5 @@
 import { Container } from './DescriptionShipStyled';
-import { endPointsAPI } from '../../../constantes/endpoints';
+import { endPointsAPI } from '../../../libr/constantes/endpoints';
 export const DescriptionShip = ({ ship, onBackClick }) => {
 	const replaceImage = error => {
 		error.target.src = endPointsAPI.starshipNoImg;
@@ -12,6 +12,7 @@ export const DescriptionShip = ({ ship, onBackClick }) => {
 			<div>
 				<img src={image} alt={ship.name} onError={replaceImage} />
 			</div>
+
 			<ul>
 				<h2>{ship.name}</h2>
 				<div>
@@ -60,10 +61,11 @@ export const DescriptionShip = ({ ship, onBackClick }) => {
 						<span>{ship.consumables}</span>
 					</li>
 				</div>
+
+				<div>
+					<button onClick={onBackClick}>Back to Ships</button>
+				</div>
 			</ul>
-			<div>
-				<button onClick={onBackClick}>Back to Ships</button>
-			</div>
 		</Container>
 	);
 };

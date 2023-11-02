@@ -1,37 +1,13 @@
 html {
 	font-size: 62.5%;
+	background-color: black;
+	
 }
 
 body {
 	font-family: 'Jura', sans-serif;
-
-	color: #000;
-	color: #f8f5f5;
-
-}
-.startH1 {
-	font-size: 2rem;
-	text-align: center;
-}
-.containerShips {
 	background-image: url(../src/assets/img/bg-stars.jpeg);
-	background-size: 180rem;
-	background-position: center 50%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+	color:#eef; 
 
-.shipContainer {
-	background-color: #333;
-	color: #f6f6f6;
-	margin-bottom: 10px;
-	margin-top: 10px;
-	padding: 20px;
-	width: 80%;
-}
-.shipName {
-	font-weight: bold;
-	font-size: 1.4rem;
-	text-transform: uppercase;
+
 }
