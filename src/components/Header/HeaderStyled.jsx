@@ -6,7 +6,7 @@ export const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 2rem 0;
-	
+
 	div:nth-of-type(1) {
 		width: 100%;
 		display: block;
@@ -51,10 +51,8 @@ export const Container = styled.div`
 		}
 	}
 	@media (max-width: 480px) {
-    button {
-      font-size: 1rem;
-    }
-  }
+		button {
+			font-size: 1rem;
+		}
+	}
 `;
-
-

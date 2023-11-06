@@ -1,51 +1,50 @@
 import {
 	FaFacebookSquare,
 	FaInstagram,
-    FaTwitter,
-    FaYoutubeSquare,
-    FaTiktok,
-    
+	FaTwitter,
+	FaYoutubeSquare,
+	FaTiktok,
 } from 'react-icons/fa';
 
 import { Container } from './FooterStyled';
 
 export const Footer = () => (
-        <Container>
+	<Container>
 		<p>More from Start Wars</p>
 		<ul>
-        <li>
-            <a href="https://www.tiktok.com/@starwars">
-                <i>
-                <FaTiktok/>
-                </i>
-            </a>
-        </li>
-        <li>
-				<a href='https://www.instagram.com/starwars/'>
+			<li>
+				<a href='https://www.tiktok.com/@starwars'>
 					<i>
-						<FaInstagram/>
+						<FaTiktok />
 					</i>
 				</a>
 			</li>
-            <li>
-                <a href="https://twitter.com/starwars">
-                    <i>
-                        <FaTwitter/>
-                    </i>
-                </a>
-            </li>
+			<li>
+				<a href='https://www.instagram.com/starwars/'>
+					<i>
+						<FaInstagram />
+					</i>
+				</a>
+			</li>
+			<li>
+				<a href='https://twitter.com/starwars'>
+					<i>
+						<FaTwitter />
+					</i>
+				</a>
+			</li>
 			<li>
 				<a href='https://www.facebook.com/starwars'>
 					<i>
-						<FaFacebookSquare/>
+						<FaFacebookSquare />
 					</i>
 				</a>
 			</li>
-			
+
 			<li>
 				<a href='https://www.youtube.com/user/starwars'>
 					<i>
-						<FaYoutubeSquare/>
+						<FaYoutubeSquare />
 					</i>
 				</a>
 			</li>
@@ -66,7 +65,7 @@ export const Footer = () => (
 			<li>
 				<a href='terms'>Additional Content Information</a>
 			</li>
-            <li>
+			<li>
 				<a href='privacy'>Privacy Policy</a>
 			</li>
 			<li>

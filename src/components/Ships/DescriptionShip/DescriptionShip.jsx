@@ -1,5 +1,6 @@
 import { Container } from './DescriptionShipStyled';
 import { endPointsAPI } from '../../../libr/constantes/endpoints';
+
 export const DescriptionShip = ({ ship, onBackClick }) => {
 	const replaceImage = error => {
 		error.target.src = endPointsAPI.starshipNoImg;

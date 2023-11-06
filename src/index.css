@@ -5,9 +5,10 @@ html {
 }
 
 body {
-	font-family: 'Jura', sans-serif;
+	font-family:'Poppins', sans-serif;
 	background-image: url(../src/assets/img/bg-stars.jpeg);
 	color:#eef; 
+	
 
 
 }

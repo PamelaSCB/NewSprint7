@@ -10,19 +10,19 @@ export const Container = styled.div`
 	margin-bottom: 1rem;
 
 	button {
-		width: 14rem;
-		background-color: '#111';
-		padding: 1rem;
-		font-size: 1.3rem;
-		color: '#eef';
+		width: 16rem;
+		background-color: #111;
+		padding: 1.5rem;
+		font-size: 1.5rem;
+		color: #eef;
 		border: 0.1rem solid transparent;
-		border-radius: 0.5rem;
+		border-radius: 2.5rem;
 		text-transform: uppercase;
 		cursor: pointer;
 	}
 
 	button:hover {
-		border-color: '#ccc';
+		border-color: #ccc;
 	}
 
 	span {

@@ -11,15 +11,11 @@ export const Starships = () => {
 	const [selectedShip, setSelectedShip] = useState(null);
 	const [page, setPage] = useState(1);
 	const { shipsData, shipDataError } = useFetchApi(url, page);
-
+	
 	return (
 		<Container>
 			<div className='containerShips'>
-				<div className='start'>
-					<p className='home'>home</p>
-					<p className='startShips'>startships</p>
-				</div>
-
+		
 				{selectedShip ? (
 					<DescriptionShip
 						ship={selectedShip}

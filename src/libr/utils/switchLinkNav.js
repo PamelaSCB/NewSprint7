@@ -1,3 +1,4 @@
+
 export const switchLinkNav = (state, action) => { 
     switch (action.type) {
         case "homeClick":
