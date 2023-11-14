@@ -1,21 +1,16 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { DescriptionShip } from '../DescriptionShip/DescriptionShip.jsx';
-import {useFetchApi} from '../../../libr/hooks/usefetchApi.jsx';
-import { endPointsAPI } from '../../../libr/constantes/endpoints.jsx';
 import { ShowPages } from '../ShowPages/ShowPages.jsx';
 import { Container } from './StartShipsStyled.jsx';
+import { StartContext } from '../../../context/StartContext.jsx';
 
 export const Starships = () => {
-	const url = endPointsAPI.starships;
+	const { selectedShip, setSelectedShip, page, setPage, shipsData } =
+		useContext(StartContext);
 
-	const [selectedShip, setSelectedShip] = useState(null);
-	const [page, setPage] = useState(1);
-	const { shipsData, shipDataError } = useFetchApi(url, page);
-	
 	return (
 		<Container>
 			<div className='containerShips'>
-		
 				{selectedShip ? (
 					<DescriptionShip
 						ship={selectedShip}

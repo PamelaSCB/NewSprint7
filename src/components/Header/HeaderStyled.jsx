@@ -28,18 +28,18 @@ export const Container = styled.div`
 		height: auto;
 	}
 
-	button {
+	.button {
 		width: 8rem;
 		background-color: #111;
 		padding: 1rem;
 		font-size: 1.3rem;
 		border: none;
+		text-decoration: none;
 		color: #eef;
 		text-transform: uppercase;
 		cursor: pointer;
 		&:hover {
-			outline: 0.1rem solid transparent;
-			border-radius: 0.5rem;
+			border-bottom: 0.1rem solid #cede1e;
 		}
 	}
 	@media (max-width: 768px) {

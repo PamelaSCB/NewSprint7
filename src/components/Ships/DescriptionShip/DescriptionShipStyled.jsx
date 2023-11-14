@@ -73,7 +73,7 @@ export const Container = styled.div`
 			cursor: pointer;
 
 			&:hover {
-				border-color: #ccc;
+				border-color: #cede1e;
 			}
 		}
 	}

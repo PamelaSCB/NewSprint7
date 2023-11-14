@@ -36,7 +36,7 @@ export const Container = styled.div`
 		color: #777;
 	}
 	.active {
-		border-bottom: 0.1rem solid #0d66d7;
+		border-bottom: 0.1rem solid #cede1e;
 	}
 	.active .link {
 		color: #eef;

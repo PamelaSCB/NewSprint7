@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$Q78lusv1Ee6SZAkqLKR.q.49NQ60af6.Vt9I4PahDweSP8fppgfWW",
+      "username": "admin",
+      "id": 1
+    },
+    {
+      "email": "user@gmail.com",
+      "password": "$2a$10$EJb3JW.Fcjs8vViiW1kQUOPGcw6BAyO8Gqd5Q1wiHyIQ3v6.Va8kO",
+      "username": "user",
+      "id": 2
+    },
+    {
+      "email": "boss@gmail.com",
+      "password": "$2a$10$.cK42DJub4S32S7Ui.5Jrukd.LJHpknZ7Rvcs7iU472Op/La8w4La",
+      "username": "boss",
+      "id": 3
+    },
+    {
+      "email": "pame@hotmail.com",
+      "password": "$2a$10$trmwLyHgmitGDOOsw6Fsve8mpNBxuCEiUT.H4NeDxWidvxBt/vzU2",
+      "username": "pame",
+      "id": 4
+    },
+    {
+      "email": "pamela@hotmail.com",
+      "password": "$2a$10$RUhNk737i1I/lmWHidAF8uVUGmg.aEeWXGhd1kz5OkNeSk8B0jlEW",
+      "username": "Pamela",
+      "id": 5
+    },
+    {
+      "email": "admin@hotmail.com",
+      "password": "$2a$10$gngDzqFFwKugwC5QVQJOQudxN6tMwX7uJh.tLnvuAMNcIg4JOsIxC",
+      "username": "adm",
+      "id": 6
+    },
+    {
+      "email": "maria@hotmail.com",
+      "password": "$2a$10$r2AfzvGRk.tFrihtt0yUfeOQ3Y5uSWLw.kjoTX2OntuaYk33jfMBm",
+      "username": "maria",
+      "id": 7
+    },
+    {
+      "email": "adm@adm.com",
+      "password": "$2a$10$UUuHdsxk92AogxUsnSQac.Gugexha8aoDhVyrNjIUJ.SfCB3RviPe",
+      "username": "Pamela",
+      "id": 8
+    }
+  ]
+}
