@@ -42,6 +42,11 @@ export const Container = styled.div`
 			border-bottom: 0.1rem solid #cede1e;
 		}
 	}
+	.logout {
+		font-size: 1.5rem;
+		background-color: #111;
+		color: #eef;
+	}
 	@media (max-width: 768px) {
 		flex-direction: column;
 		gap: 2rem;

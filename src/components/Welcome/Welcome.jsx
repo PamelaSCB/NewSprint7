@@ -1,8 +1,17 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useContext, useEffect } from 'react';
 import { endPointsAPI } from '../../libr/constantes/endpoints';
 import { Container } from './WelcomeStyled';
+import { StartContext } from '../../context/StartContext';
 export const Welcome = () => {
-	const navigate = useNavigate();
+	const { currentPath, changePath } = useContext(StartContext);
+
+	useEffect(() => {
+		changePath('/');
+	}, []);
+	console.log('currentPath', currentPath);
+	
+
 	return (
 		<Container>
 			<div>
@@ -25,7 +34,9 @@ export const Welcome = () => {
 					future visits. May the Force be with you always!"
 				</p>
 			</div>
-			<button onClick={() => navigate('/startships')}>StartShips</button>
+			<Link to='/startships'>
+				<button>Go to StartShips</button>
+			</Link>
 		</Container>
 	);
 };

@@ -5,8 +5,15 @@ import { Container } from './StartShipsStyled.jsx';
 import { StartContext } from '../../../context/StartContext.jsx';
 
 export const Starships = () => {
-	const { selectedShip, setSelectedShip, page, setPage, shipsData } =
-		useContext(StartContext);
+	const {
+		selectedShip,
+		setSelectedShip,
+		page,
+		setPage,
+		shipsData,
+		loading,
+		setLoading,
+	} = useContext(StartContext);
 
 	return (
 		<Container>

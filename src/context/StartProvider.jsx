@@ -8,8 +8,12 @@ export const StartProvider = ({ children }) => {
 	const [selectedShip, setSelectedShip] = useState(null);
 	const [page, setPage] = useState(1);
 	const url = endPointsAPI.starships;
+	const [loading, setLoading] = useState(true);
 	const [shipsData, setShipsData] = useState([]);
 	const [shipDataError, setShipDataError] = useState();
+	useEffect(() => {
+		fetApi(url, page, setShipsData, setShipDataError);
+	}, [page]);
 
 	// useState para el login y signUp
 	const [displayLogin, setDisplayLogin] = useState(false);
@@ -26,15 +30,12 @@ export const StartProvider = ({ children }) => {
 	const [valid, setValid] = useState(true);
 
 	useEffect(() => {
-		fetApi(url, page, setShipsData, setShipDataError);
-	}, [page]);
-
-	useEffect(() => {
 		userData.username !== undefined
 			? setUsername(userData.username.toUpperCase())
 			: setUsername(prevUsername => prevUsername);
 	}, [userData]);
 
+	// para borrar los datos del usuario
 	const resetUserData = () => {
 		setUserData({
 			email: '',
@@ -42,14 +43,23 @@ export const StartProvider = ({ children }) => {
 		});
 	};
 
+	const [currentPath, setCurrentPath] = useState('/');
+
+	const changePath = path => setCurrentPath(path);
+
 	return (
 		<StartContext.Provider
 			value={{
 				selectedShip,
 				setSelectedShip,
 				url,
+				// pages de los starships
 				page,
 				setPage,
+
+				loading,
+				setLoading,
+
 				shipsData,
 				setShipsData,
 				shipDataError,
@@ -70,6 +80,10 @@ export const StartProvider = ({ children }) => {
 				// para username
 				username,
 				setUsername,
+
+				// estados de las rutas
+				currentPath,
+				changePath,
 			}}
 		>
 			{children}

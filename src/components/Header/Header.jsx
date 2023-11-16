@@ -1,10 +1,13 @@
-import StarWarsLogo from '../../assets/img/logo-starwars.png';
-import { Container } from './HeaderStyled';
 import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { StartContext } from '../../context/StartContext';
 
+import StarWarsLogo from '../../assets/img/logo-starwars.png';
+import { Container } from './HeaderStyled';
+
 export const Header = () => {
+	const navega = useNavigate();
+
 	const {
 		// datos de usuario
 		username,
@@ -14,7 +17,6 @@ export const Header = () => {
 		displayLogin,
 		setDisplayLogin,
 	} = useContext(StartContext);
-	const navigate = useNavigate();
 
 	return (
 		<Container>
@@ -27,7 +29,6 @@ export const Header = () => {
 						className='button'
 						onClick={() => {
 							setDisplayLogin(!displayLogin);
-							resetUserData();
 						}}
 					>
 						<span>{username || 'LOG IN'}</span>
@@ -35,12 +36,12 @@ export const Header = () => {
 				</Link>
 
 				{username !== undefined && (
-					<button className='logout'>
+					<button className='button'>
 						<span
 							onClick={() => {
 								setUsername(undefined);
 								resetUserData();
-								navigate('/');
+								navega('/login');
 							}}
 						>
 							LOGOUT
